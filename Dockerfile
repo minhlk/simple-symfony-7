@@ -33,6 +33,7 @@ RUN set -eux; \
 	;
 
 ###> recipes ###
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 ###< recipes ###
 
 COPY --link frankenphp/conf.d/app.ini $PHP_INI_DIR/conf.d/
