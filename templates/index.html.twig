@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Welcome master
+{% endblock %}
+
+{% block body %}
+    {% for movie in movies %}
+        <li>{{ movie }}</li>
+    {% endfor %}
+{% endblock %}
