@@ -11,18 +11,18 @@ class Movies extends Fixture
     public function load(ObjectManager $manager): void
     {
         $movie = new Movie();
-        $movie->setTitle('Title 1')
+        $movie->setTitle('Avengers')
             ->setReleaseYear('20231212')
-            ->setDescription('This is the first description')
-            ->setImagePath('https://dummyimage.com/120x120');
+            ->setDescription('The Avengers are a team of fictional superheroes and the protagonists of the Marvel Cinematic Universe (MCU) media franchise, based on ')
+            ->setImagePath('https://dummyimage.com/600x400/000/fff&text=Avenger');
         
         $manager->persist($movie);
 
         $movie2 = new Movie();
-        $movie2->setTitle('Title 2')
+        $movie2->setTitle('Judgement Day')
             ->setReleaseYear('20231213')
-            ->setDescription('This is the second description')
-            ->setImagePath('https://dummyimage.com/125x125');
+            ->setDescription('Judgement Day are a team of fictional superheroes and the protagonists of the Marvel Cinematic Universe (MCU) media franchise, based on ')
+            ->setImagePath('https://dummyimage.com/600x400/000/fff&text=Judgement Day');
 
         $manager->persist($movie2);
 

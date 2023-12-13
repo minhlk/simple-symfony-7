@@ -1,0 +1,45 @@
+{% extends "./base.html.twig" %}
+
+{% block body %}
+    <div class="sm:w-3/5 w-4/5 mx-auto">
+        <h1 class="pt-20 sm:text-5xl md:text-7xl text-4xl font-bold text-center">
+            {{ movie.title }}
+        </h1>
+
+        <div class="py-10 text-center">
+            <div class="inline-block sm:pt-1">
+                <h2 class="font-bold">
+                    Created by: Code With Minh
+                </h2>
+
+                <p class="text-sm text-gray-600">
+                    {{ movie.releaseYear }}
+                </p>
+            </div>
+
+            <x-share-blog :shareButtons="$shareButtons" />
+        </div>
+
+        <img
+                src="{{ movie.imagePath }}"
+                class="rounded-xl w-full shadow-xl"
+                alt="Icon of Code With Dary"
+        />
+
+        <p class="text-xl py-6">
+            {{ movie.description }}
+        </p>
+        <a 
+            href="/movie/edit/{{ movie.id }}"
+            class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800"
+        >
+            Edit movie
+        </a>
+        <a 
+            href="/movie/delete/{{ movie.id }}"
+            class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-red-800 text-white hover:bg-white hover:text-gray-800"
+        >
+            Delete movie
+        </a>
+    </div>
+{% endblock %}

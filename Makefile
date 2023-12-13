@@ -51,3 +51,6 @@ sf: ## List all Symfony commands or pass the parameter "c=" to run a given comma
 
 cc: c=c:c ## Clear the cache
 cc: sf
+
+mysql:
+	mycli -uroot -h127.0.0.1 -ppassword -P33066 main
